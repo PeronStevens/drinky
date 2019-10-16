@@ -18,7 +18,8 @@ export default {
 
 <style lang="css">
     .drink-thumbnail {
-        width: 100%;
+        width: 100%;        
+        max-height: 300px;
         max-width: 300px;
         border-radius: 50%;
         border: 4px solid;;
@@ -33,7 +34,10 @@ export default {
         display: flex;
         justify-content: center;
         flex: 1;
-    }    
+    }
+    .img-wrap {
+
+    }
     @media(min-width: 500px) {
         header {
             display: flex;
