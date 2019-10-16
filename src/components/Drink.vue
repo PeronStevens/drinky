@@ -1,6 +1,7 @@
 <template>
     <div class="container" >
-        <h2 @click="getDrinkData" class="title" >Sippy Cup</h2>        
+        <h2 class="title" >Sippy Cup</h2>
+        <button @click="getDrinkData" class="new-drink-button" >New Drink</button>   
         <DrinkHeader :name="drinkName" :category="drinkCategory" :image="drinkImgUrl" />
         <DrinkContent :instructions="drinkInstructions" :measurements="measures" :ingredients="ingredients" />
     </div>
@@ -79,5 +80,15 @@ export default {
         background: #000;
         color: #fff;
         width: 120px;
+    }
+    .new-drink-button {
+        background: #7b7b7b;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .new-drink-button:hover {
+        background: #353535;
     }
 </style>
