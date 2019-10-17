@@ -1,7 +1,7 @@
 <template>
     <header class="header" >
         <div class="name-wrap" >
-            <h2> {{ name }} </h2>
+            <h1> {{ name }} </h1>
             <h4> {{ category }} </h4>
         </div>
         <div class="img-wrap" >
@@ -25,7 +25,7 @@ export default {
         max-height: 300px;
         max-width: 300px;
         border-radius: 50%;
-        border: 4px solid;;
+        /* border: 1px solid;; */
         padding: 10px;
     }
     .name-wrap {
