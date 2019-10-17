@@ -1,6 +1,6 @@
 <template>
     <div class="container" >
-        <h2 class="title" >Sippy Cup</h2>
+        <h2 class="title" >Drinky-Drink</h2>
         <button @click="getDrinkData" class="new-drink-button" >New Drink <span>&#x21b7;</span> </button>   
         <DrinkHeader :name="drinkName" :category="drinkCategory" :image="drinkImgUrl" />
         <DrinkContent :instructions="drinkInstructions" :measurements="measures" :ingredients="ingredients" />
@@ -79,7 +79,7 @@ export default {
         padding: 10px;
         background: #000;
         color: #fff;
-        width: 120px;
+        width: 160px;
     }
     .new-drink-button {
         background: transparent;
