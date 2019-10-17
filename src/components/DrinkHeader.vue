@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="header" >
         <div class="name-wrap" >
             <h2> {{ name }} </h2>
             <h4> {{ category }} </h4>
@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style lang="css">
+    .header {
+        display: flex;        
+    }
     .drink-thumbnail {
         width: 100%;        
         max-height: 300px;
@@ -34,9 +37,6 @@ export default {
         display: flex;
         justify-content: center;
         flex: 1;
-    }
-    .img-wrap {
-
     }
     @media(min-width: 500px) {
         header {
