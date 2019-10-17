@@ -82,9 +82,10 @@ export default {
         width: 160px;
     }
     .new-drink-button {
+        font-size: 14px;
         background: transparent;
         color: #000;
-        border: 1px solid #000;
+        border: 2px solid #000;
         padding: 10px;
         cursor: pointer;
         transition: 1s;
