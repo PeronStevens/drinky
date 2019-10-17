@@ -79,7 +79,7 @@ export default {
         padding: 10px;
         background: #000;
         color: #fff;
-        width: 160px;
+        width: 170px;
     }
     .new-drink-button {
         font-size: 14px;

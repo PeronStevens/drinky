@@ -38,6 +38,11 @@ export default {
         justify-content: center;
         flex: 1;
     }
+    @media(max-width: 768px) {
+        .header {
+            display: initial;
+        }
+    }
     @media(min-width: 500px) {
         header {
             display: flex;
