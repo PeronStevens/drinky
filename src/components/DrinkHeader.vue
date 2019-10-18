@@ -1,25 +1,48 @@
 <template>
     <header class="header" >
-        <div class="name-wrap" >
-            <h1> {{ name }} </h1>
-            <h4> {{ category }} </h4>
-        </div>
-        <div class="img-wrap" >
-            <img class="drink-thumbnail" :src="image" alt="">
-        </div>
+        <h2 class="title" >Drinky-Drink</h2>
+        <button @click="getDrinkData" class="new-drink-button" >New Drink <span>&#x21b7;</span> </button>   
     </header>
 </template>
 
 <script>
 export default {
-    props: ['name', 'image', 'category']
+    methods: {
+        getDrinkData: function() {
+            this.$emit('getData');
+        }
+    }
 }
 </script>
 
 <style lang="css">
-    .header {
-        display: flex;        
+    .title:hover {
+        color: grey;
     }
+    .title {
+        transition: .7s;
+        box-shadow: 10px 10px grey;
+        padding: 10px;
+        background: #000;
+        color: #fff;
+        width: 170px;
+    }
+    .new-drink-button {
+        font-size: 14px;
+        background: transparent;
+        color: #000;
+        border: 2px solid #000;
+        padding: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .new-drink-button:hover {
+        background: #e2dfdb;
+    }
+
+
+
+
     .drink-thumbnail {
         width: 100%;        
         max-height: 300px;
@@ -38,15 +61,8 @@ export default {
         justify-content: center;
         flex: 1;
     }
-    @media(max-width: 768px) {
-        .header {
-            display: initial;
-        }
-    }
     @media(min-width: 500px) {
-        header {
-            display: flex;
-        }
+
         .name-wrap {
             align-items: center;
         }

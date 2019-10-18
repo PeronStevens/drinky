@@ -1,9 +1,13 @@
 <template>
     <div class="container" >
-        <h2 class="title" >Drinky-Drink</h2>
-        <button @click="getDrinkData" class="new-drink-button" >New Drink <span>&#x21b7;</span> </button>   
-        <DrinkHeader :name="drinkName" :category="drinkCategory" :image="drinkImgUrl" />
-        <DrinkContent :instructions="drinkInstructions" :measurements="measures" :ingredients="ingredients" />
+        <DrinkHeader @getData="getDrinkData" />
+        <DrinkContent 
+            :name="drinkName" 
+            :category="drinkCategory" 
+            :image="drinkImgUrl"
+            :instructions="drinkInstructions" 
+            :measurements="measures" 
+            :ingredients="ingredients" />
     </div>
 </template>
 
@@ -65,32 +69,6 @@ export default {
     .container {
         margin: auto;
         max-width: 768px;
-
-
-    font-family: 'Playfair Display', serif;
-
-    }
-    .title:hover {
-        color: grey;
-    }
-    .title {
-        transition: .7s;
-        box-shadow: 10px 10px grey;
-        padding: 10px;
-        background: #000;
-        color: #fff;
-        width: 170px;
-    }
-    .new-drink-button {
-        font-size: 14px;
-        background: transparent;
-        color: #000;
-        border: 2px solid #000;
-        padding: 10px;
-        cursor: pointer;
-        transition: 1s;
-    }
-    .new-drink-button:hover {
-        background: #e2dfdb;
+        font-family: 'Playfair Display', serif;
     }
 </style>
